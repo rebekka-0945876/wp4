@@ -58,4 +58,4 @@ app.add_url_rule('/api/user_courses', 'user_courses', user_courses, methods=['GE
 if __name__ == '__main__':
     #with open('backend/ip_address.txt', 'r') as file:
     #    ip_address = file.read().strip()
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=False)
