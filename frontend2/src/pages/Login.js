@@ -23,7 +23,7 @@ const LoginApp = ({ navigation }) => {
             const responseData = await response.json();
 
             if (response.ok) {
-                await AsyncStorage.setItem('userToken', responseData.access_token);
+                document.cookie = `token=${responseData.access_token}; HttpOnly; SameSite=Strict; Secure`;
                 if (!isNaN(username)) {
                 navigation.navigate('Dashboard');
                 } else {
