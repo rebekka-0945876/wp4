@@ -34,6 +34,12 @@ const RegisterApp = ({ navigation }) => {
     }, []);
 
     const handleRegister = async () => {
+
+        if (password.length < 8 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password) || !/[!@#$%^&*]/.test(password)) {
+            universalAlert('Registratiefout', 'Wachtwoord moet minimaal 8 tekens bevatten, inclusief een hoofdletter, een kleine letter, een cijfer en een speciaal teken.');
+            return;
+        }
+
         if (!email || !password || !firstName || !lastName || !selectedDomain) {
             universalAlert('Registratiefout', 'Alle velden behalve tussenvoegsel zijn verplicht');
             return;
