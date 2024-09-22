@@ -2,8 +2,14 @@ from flask import jsonify, request
 from backend.sqlite_models import Teachers
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
-
+jwt_required()
 def teacher_progress_dashboard():
+    current_user = get_jwt_identity()
+
+    # Only allow teachers to access this
+    if current_user['role_id'] != 1:  # 1 is teacher
+        return jsonify({"error": "Verboden toegang: Je moet een docent zijn om deze pagina te bekijken."}), 403
+
     teacher_model = Teachers()
     progresses = teacher_model.get_progresses()
 
