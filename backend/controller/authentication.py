@@ -9,9 +9,14 @@ def login():
     password = request.json.get('password')
     domain = request.json.get('domain_id')
     user = get_user_by_username(username)
+
     if user and check_password_hash(user['password'], password):
-        access_token = create_access_token(identity={'username': user['username'], 'user_id': user['id']})
-        return jsonify(access_token=access_token, success=True, message="Inloggen succesvol")
+        access_token = create_access_token(identity={
+            'username': user['username'],
+            'user_id': user['id'],
+            'role_id': user['role_id']
+        })
+        return jsonify(access_token=access_token, success=True, message="Inloggen succesvol"), 200
     else:
         return jsonify(success=False, message="Onjuiste gebruikersnaam of wachtwoord"), 401
 
