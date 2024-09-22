@@ -15,7 +15,7 @@ from controller.course_management import (courses_dashboard, domains_dashboard, 
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'default_fallback_key')
-CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+CORS(app, resources={r"/api/*": {"origins": "https://hogeschoolrotterdam.nl"}}, supports_credentials=True)
 
 jwt = JWTManager(app)
 
