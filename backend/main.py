@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager, jwt_required, get_jwt_identity
@@ -13,8 +14,7 @@ from controller.course_management import (courses_dashboard, domains_dashboard, 
                                           user_courses)
 
 app = Flask(__name__)
-app.secret_key = 'this_is_a_secret_key'
-app.config['JWT_SECRET_KEY'] = 'this_is_a_jwt_secret_key'
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'default_fallback_key')
 CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 
 jwt = JWTManager(app)
