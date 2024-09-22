@@ -2,6 +2,7 @@ from flask import request, jsonify
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import check_password_hash
 from user import get_user_by_username, add_user
+from db import log_event
 
 
 def login():
@@ -11,17 +12,18 @@ def login():
     user = get_user_by_username(username)
 
     if user and check_password_hash(user['password'], password):
-        access_token = create_access_token(identity={
-            'username': user['username'],
-            'user_id': user['id'],
-            'role_id': user['role_id']
-        })
-        return jsonify(access_token=access_token, success=True, message="Inloggen succesvol"), 200
+        access_token = create_access_token(identity={'username': user['username'], 'user_id': user['id']})
+        log_event(user['id'], 'LOGIN', f"User {user['username']} logged in successfully")
+        return jsonify(access_token=access_token, success=True, message="Inloggen succesvol")
     else:
+        log_event(None, 'FAILED_LOGIN', f"Failed login attempt for username {username}")
         return jsonify(success=False, message="Onjuiste gebruikersnaam of wachtwoord"), 401
 
 
 def logout():
+    current_user = get_jwt_identity()
+    if current_user:
+        log_event(current_user['user_id'], 'LOGOUT', f"User {current_user['username']} logged out successfully")
     return jsonify(message="Uitloggen succesvol")
 
 
