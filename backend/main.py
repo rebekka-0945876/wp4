@@ -15,6 +15,7 @@ from controller.course_management import (courses_dashboard, domains_dashboard, 
 
 app = Flask(__name__)
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'default_fallback_key')
+app.config['ENV'] = 'production'
 CORS(app, resources={r"/api/*": {"origins": "https://hogeschoolrotterdam.nl"}}, supports_credentials=True)
 
 jwt = JWTManager(app)
@@ -65,7 +66,10 @@ def add_security_headers(response):
         "img-src 'self'; " 
         "frame-ancestors 'none';"
     )
+    response.headers['X-Content-Type-Options'] = 'nosniff'
     return response
+
+
 
 
 
