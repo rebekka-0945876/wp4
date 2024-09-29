@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6aeddebe-6f58-4ce0-8475-68d1ebe4ef2d" name="Changes" comment="" />
+    <list default="true" id="6aeddebe-6f58-4ce0-8475-68d1ebe4ef2d" name="Changes" comment="fix: Dockerfiles to reduce vulnerabilities">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="snyk-fix-78745a29b459316930832f279fdc93e2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rebekka-0945876&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rebekka-0945876/wp4.git&quot;,
+    &quot;accountId&quot;: &quot;1a6afd6c-7914-4277-b192-d95c39887876&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -22,35 +46,14 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="wp4-2024-react-1d2-koffie" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,10 +71,136 @@
       <option name="presentableId" value="Default" />
       <updated>1727036470604</updated>
       <workItem from="1727036471769" duration="224000" />
+      <workItem from="1727639390652" duration="2027000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1727036766137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727036766137</updated>
+    </task>
+    <task id="LOCAL-00002" summary="JWT token checkt nu role_id">
+      <option name="closed" value="true" />
+      <created>1727037248306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037248306</updated>
+    </task>
+    <task id="LOCAL-00003" summary="secret key nu in env">
+      <option name="closed" value="true" />
+      <created>1727037567160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727037567160</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gebruik cookies ipv asyncstorage in login.js">
+      <option name="closed" value="true" />
+      <created>1727038559041</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727038559041</updated>
+    </task>
+    <task id="LOCAL-00005" summary="check toegevoegd aan teacher_management.py om te kijken of gebruker een docent is">
+      <option name="closed" value="true" />
+      <created>1727038897201</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727038897201</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Debug mode naar false gezet">
+      <option name="closed" value="true" />
+      <created>1727039109228</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727039109228</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Origin naar https://hogeschoolrotterdam.nl">
+      <option name="closed" value="true" />
+      <created>1727039402268</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727039402268</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Wachtwoord moeten nu minimaal 8 tekens bevatten, inclusief een hoofdletter, een kleine letter, een cijfer en een speciaal teken.">
+      <option name="closed" value="true" />
+      <created>1727039794298</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727039794298</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Logfunctie gemaakt + database tabel aangemaakt">
+      <option name="closed" value="true" />
+      <created>1727040693111</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727040693111</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Login en logout worden gelogd in de database">
+      <option name="closed" value="true" />
+      <created>1727040787097</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1727040787097</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: Dockerfiles to reduce vulnerabilities">
+      <option name="closed" value="true" />
+      <created>1727640957813</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727640957813</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="JWT token checkt nu role_id" />
+    <MESSAGE value="secret key nu in env" />
+    <MESSAGE value="gebruik cookies ipv asyncstorage in login.js" />
+    <MESSAGE value="check toegevoegd aan teacher_management.py om te kijken of gebruker een docent is" />
+    <MESSAGE value="Debug mode naar false gezet" />
+    <MESSAGE value="Origin naar https://hogeschoolrotterdam.nl" />
+    <MESSAGE value="Wachtwoord moeten nu minimaal 8 tekens bevatten, inclusief een hoofdletter, een kleine letter, een cijfer en een speciaal teken." />
+    <MESSAGE value="Logfunctie gemaakt + database tabel aangemaakt" />
+    <MESSAGE value="Login en logout worden gelogd in de database" />
+    <MESSAGE value="fix: Dockerfiles to reduce vulnerabilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Dockerfiles to reduce vulnerabilities" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -24,7 +24,9 @@ jwt = JWTManager(app)
 def handle_options_request():
     if request.method == 'OPTIONS':
         response = make_response()
-        response.headers.add('Access-Control-Allow-Origin', '*')
+        origin = request.headers.get('Origin')
+        if origin == 'https://hogeschoolrotterdam.nl':
+            response.headers.add('Access-Control-Allow-Origin', origin)
         response.headers.add('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS')
         response.headers.add('Access-Control-Allow-Headers', 'Origin, Content-Type, X-Auth-Token, Authorization')
         return response
