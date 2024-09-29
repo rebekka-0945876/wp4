@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6aeddebe-6f58-4ce0-8475-68d1ebe4ef2d" name="Changes" comment="fix: Dockerfiles to reduce vulnerabilities">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6aeddebe-6f58-4ce0-8475-68d1ebe4ef2d" name="Changes" comment="FIX: wildcard removed in origin.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controller/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -71,7 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1727036470604</updated>
       <workItem from="1727036471769" duration="224000" />
-      <workItem from="1727639390652" duration="2027000" />
+      <workItem from="1727639390652" duration="2850000" />
+      <workItem from="1727642931542" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -161,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727640957813</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="FIX: wildcard removed in origin.">
+      <option name="closed" value="true" />
+      <created>1727641654560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727641654560</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +200,8 @@
     <MESSAGE value="Logfunctie gemaakt + database tabel aangemaakt" />
     <MESSAGE value="Login en logout worden gelogd in de database" />
     <MESSAGE value="fix: Dockerfiles to reduce vulnerabilities" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Dockerfiles to reduce vulnerabilities" />
+    <MESSAGE value="FIX: wildcard removed in origin." />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: wildcard removed in origin." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -202,5 +213,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wp4$main.coverage" NAME="main Coverage Results" MODIFIED="1727643045547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
   </component>
 </project>

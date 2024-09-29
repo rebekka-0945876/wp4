@@ -56,6 +56,12 @@ app.add_url_rule('/api/moduleStatus', 'get_module_status', get_module_status, me
 app.add_url_rule('/api/user_courses', 'user_courses', user_courses, methods=['GET'])
 
 
+@app.after_request
+def add_security_headers(response):
+    response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';"
+    return response
+
+
 
 if __name__ == '__main__':
     #with open('backend/ip_address.txt', 'r') as file:
